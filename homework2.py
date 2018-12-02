@@ -4,7 +4,6 @@ import xml.etree.ElementTree as ET
 def file_xml():
     parser = ET.XMLParser(encoding='utf-8')
     tree = ET.parse("files/newsafr.xml", parser)
-    titles = []
     root = tree.getroot()
     xml_description = root.findall('channel/item/description')
     return xml_description
